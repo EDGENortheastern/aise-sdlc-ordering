@@ -15,10 +15,23 @@ import {
 
 import SortableItem from "./SortableItem";
 
+const correctOrder = [
+    "Feasibility Study",
+    "Requirements Elicitation",
+    "Analysis",
+    "Design",
+    "Implementation",
+    "Testing",
+    "Deployment",
+    "Maintenance",
+];
+
 export default function SDLCOrdering() {
     const [stages, setStages] = useState(() =>
         shuffle(sdlcPhases)
     );
+
+    const [isComplete, setIsComplete] = useState(false);
 
     function handleDragEnd(event) {
         const { active, over } = event;
@@ -34,13 +47,28 @@ export default function SDLCOrdering() {
                 (item) => item.id === over.id
             );
 
-            return arrayMove(items, oldIndex, newIndex);
+            const newItems = arrayMove(items, oldIndex, newIndex);
+
+            const orderedCorrectly = newItems.every(
+                (item, index) =>
+                    item.label === correctOrder[index]
+            );
+
+            setIsComplete(orderedCorrectly);
+
+            return newItems;
         });
     }
 
     return (
-        <div>
+        <div className="container">
             <h1>Reorder the SDLC Phases</h1>
+
+            {isComplete && (
+                <div className="success-banner">
+                    ✅ Correct Order Achieved!
+                </div>
+            )}
 
             <DndContext
                 collisionDetection={closestCenter}
