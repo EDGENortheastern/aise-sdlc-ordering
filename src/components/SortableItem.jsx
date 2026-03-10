@@ -26,6 +26,7 @@ export default function SortableItem({ id, stage }) {
             style={style}
             {...attributes}
             {...listeners}
+            className="sdlc-card"
         >
             {stage.label}
         </div>
