@@ -14,7 +14,7 @@ export default function SortableItem({ id, stage }) {
         transform: CSS.Transform.toString(transform),
         transition,
         padding: "8px",
-        border: "1px solid #ccc",
+        border: `2px solid ${stage.colour}`,
         marginBottom: "6px",
         background: "white",
         cursor: "grab"
