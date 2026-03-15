@@ -2,37 +2,37 @@ export const sdlcPhases = [
     {
         id: "feasibility",
         label: "Feasibility Study",
-        colour: "#ffe1a5"
+        colour: "#fdb737"
     },
     {
         id: "requirements",
         label: "Requirements Elicitation",
-        colour: "#ffd580"
+        colour: "#e46225"
     },
     {
         id: "analysis",
         label: "Analysis",
-        colour: "#fec54c"
+        colour: "#f58552"
     },
     {
         id: "design",
         label: "Design",
-        colour: "#fdb737"
+        colour: "#62b6d0"
     },
     {
         id: "implementation",
         label: "Implementation",
-        colour: "#e2a854"
+        colour: "#609f80"
     },
     {
         id: "testing",
         label: "Testing",
-        colour: "#98d1b5"
+        colour: "#0d3353"
     },
     {
         id: "deployment",
         label: "Deployment",
-        colour: "#609f80"
+        colour: "#2d7496"
     },
     {
         id: "maintenance",
