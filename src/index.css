@@ -25,6 +25,8 @@ a:hover {
 }
 
 body {
+  font-size: 16px;
+  line-height: 1.5;
   margin: 0;
   display: flex;
   place-items: center;
@@ -82,4 +84,10 @@ button:focus-visible {
 .sdlc-card:hover {
   border-color: #666;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.instructions {
+  margin-bottom: 20px;
+  color: #4b5563;
+  font-size: 1.2rem;
 }
