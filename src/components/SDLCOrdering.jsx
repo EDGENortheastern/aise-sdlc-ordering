@@ -2,6 +2,8 @@ import { useState } from "react";
 import { sdlcPhases } from "../data/sdlcPhases";
 import { shuffle } from "../utils/shuffle";
 
+import confetti from "canvas-confetti";
+
 import {
     DndContext,
     closestCenter
@@ -50,9 +52,16 @@ export default function SDLCOrdering() {
             const newItems = arrayMove(items, oldIndex, newIndex);
 
             const orderedCorrectly = newItems.every(
-                (item, index) =>
-                    item.label === correctOrder[index]
+                (item, index) => item.label === correctOrder[index]
             );
+
+            if (orderedCorrectly && !isComplete) {
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { x: 0.4, y: 0.6 }
+                });
+            }
 
             setIsComplete(orderedCorrectly);
 
