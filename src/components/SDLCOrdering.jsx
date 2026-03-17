@@ -64,6 +64,10 @@ export default function SDLCOrdering() {
         <div className="container">
             <h1>Reorder the SDLC Phases</h1>
 
+            <p className="instructions">
+                Drag the SDLC phases into the correct order. You'll know when you're done 😉
+            </p>
+
             {isComplete && (
                 <div className="success-banner">
                     ✅ Correct Order Achieved!
