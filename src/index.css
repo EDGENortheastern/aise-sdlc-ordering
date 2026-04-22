@@ -71,6 +71,13 @@ button:focus-visible {
   }
 }
 
+.container {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .sdlc-card {
   padding: 8px;
   border: 1px solid #bfbfbf;
