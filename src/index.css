@@ -29,14 +29,16 @@ body {
   line-height: 1.5;
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.4em;
   line-height: 1.1;
+  text-align: center;
 }
 
 button {
@@ -74,8 +76,6 @@ button:focus-visible {
 .container {
   max-width: 480px;
   width: 100%;
-  margin: 0 auto;
-  text-align: center;
 }
 
 .sdlc-card {
