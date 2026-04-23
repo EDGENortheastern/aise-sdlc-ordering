@@ -1,3 +1,35 @@
+## Bug: Codecov not reporting coverage
+
+### Summary
+Codecov is not displaying any coverage data for the repository, despite tests running and a workflow configured.
+
+---
+
+### Expected behaviour
+- Coverage reports should be uploaded to Codecov after CI runs
+- Codecov dashboard should show coverage %
+- Repository should not display "Configure"
+
+---
+
+### Actual behaviour
+- Codecov shows no data
+- Repository remains in "Configure" state
+- No coverage appears after multiple commits
+
+---
+
+### Environment
+- Repository: aise-sdlc-ordering
+- CI: GitHub Actions
+- Node version: 20
+- Test framework: Jest (via `npm run test:coverage`)
+
+---
+
+### Workflow configuration
+
+```yaml
 name: Codecov
 
 on:
